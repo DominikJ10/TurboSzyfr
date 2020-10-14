@@ -32,25 +32,25 @@ public:
     QTabWidget *tabWidget;
     QWidget *tab;
     QLabel *label;
-    QPlainTextEdit *plainTextEdit;
-    QPlainTextEdit *plainTextEdit_2;
-    QSpinBox *spinBox;
+    QPlainTextEdit *plainTextEditinput;
+    QPlainTextEdit *plainTextEditoutput;
+    QSpinBox *spinBoxprzesuniecie;
     QLabel *label_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *pushButtonwczytaj;
+    QPushButton *pushButtonzapisz;
     QLabel *label_3;
-    QPushButton *pushButton_3;
-    QWidget *widget;
+    QPushButton *pushButtonwykonaj;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *radioButtonszyfruj;
+    QRadioButton *radioButtondeszyfruj;
     QWidget *tab_3;
     QTextEdit *textEdit;
     QPushButton *pushButton_4;
     QLineEdit *lineEdit;
     QLabel *label_5;
     QLabel *label_6;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout;
     QLabel *label_4;
     QRadioButton *radioButton_3;
@@ -70,46 +70,46 @@ public:
         label = new QLabel(tab);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(200, 170, 71, 22));
-        plainTextEdit = new QPlainTextEdit(tab);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(20, 50, 481, 101));
-        plainTextEdit_2 = new QPlainTextEdit(tab);
-        plainTextEdit_2->setObjectName(QString::fromUtf8("plainTextEdit_2"));
-        plainTextEdit_2->setGeometry(QRect(20, 400, 481, 101));
-        spinBox = new QSpinBox(tab);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(270, 170, 51, 22));
-        spinBox->setValue(13);
+        plainTextEditinput = new QPlainTextEdit(tab);
+        plainTextEditinput->setObjectName(QString::fromUtf8("plainTextEditinput"));
+        plainTextEditinput->setGeometry(QRect(20, 50, 481, 101));
+        plainTextEditoutput = new QPlainTextEdit(tab);
+        plainTextEditoutput->setObjectName(QString::fromUtf8("plainTextEditoutput"));
+        plainTextEditoutput->setGeometry(QRect(20, 400, 481, 101));
+        spinBoxprzesuniecie = new QSpinBox(tab);
+        spinBoxprzesuniecie->setObjectName(QString::fromUtf8("spinBoxprzesuniecie"));
+        spinBoxprzesuniecie->setGeometry(QRect(270, 170, 51, 22));
+        spinBoxprzesuniecie->setValue(13);
         label_2 = new QLabel(tab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 30, 47, 13));
-        pushButton = new QPushButton(tab);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(419, 160, 81, 21));
-        pushButton_2 = new QPushButton(tab);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(420, 510, 80, 21));
+        pushButtonwczytaj = new QPushButton(tab);
+        pushButtonwczytaj->setObjectName(QString::fromUtf8("pushButtonwczytaj"));
+        pushButtonwczytaj->setGeometry(QRect(419, 160, 81, 21));
+        pushButtonzapisz = new QPushButton(tab);
+        pushButtonzapisz->setObjectName(QString::fromUtf8("pushButtonzapisz"));
+        pushButtonzapisz->setGeometry(QRect(420, 510, 80, 21));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(20, 380, 47, 13));
-        pushButton_3 = new QPushButton(tab);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(180, 300, 161, 71));
-        widget = new QWidget(tab);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(190, 220, 138, 21));
-        horizontalLayout = new QHBoxLayout(widget);
+        pushButtonwykonaj = new QPushButton(tab);
+        pushButtonwykonaj->setObjectName(QString::fromUtf8("pushButtonwykonaj"));
+        pushButtonwykonaj->setGeometry(QRect(180, 300, 161, 71));
+        layoutWidget = new QWidget(tab);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(190, 220, 138, 21));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        radioButton = new QRadioButton(widget);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButtonszyfruj = new QRadioButton(layoutWidget);
+        radioButtonszyfruj->setObjectName(QString::fromUtf8("radioButtonszyfruj"));
 
-        horizontalLayout->addWidget(radioButton);
+        horizontalLayout->addWidget(radioButtonszyfruj);
 
-        radioButton_2 = new QRadioButton(widget);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        radioButtondeszyfruj = new QRadioButton(layoutWidget);
+        radioButtondeszyfruj->setObjectName(QString::fromUtf8("radioButtondeszyfruj"));
 
-        horizontalLayout->addWidget(radioButton_2);
+        horizontalLayout->addWidget(radioButtondeszyfruj);
 
         tabWidget->addTab(tab, QString());
         tab_3 = new QWidget();
@@ -129,23 +129,23 @@ public:
         label_6 = new QLabel(tab_3);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(20, 420, 47, 13));
-        widget1 = new QWidget(tab_3);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(20, 30, 81, 65));
-        verticalLayout = new QVBoxLayout(widget1);
+        layoutWidget1 = new QWidget(tab_3);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(20, 30, 81, 65));
+        verticalLayout = new QVBoxLayout(layoutWidget1);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_4 = new QLabel(widget1);
+        label_4 = new QLabel(layoutWidget1);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         verticalLayout->addWidget(label_4);
 
-        radioButton_3 = new QRadioButton(widget1);
+        radioButton_3 = new QRadioButton(layoutWidget1);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
 
         verticalLayout->addWidget(radioButton_3);
 
-        radioButton_4 = new QRadioButton(widget1);
+        radioButton_4 = new QRadioButton(layoutWidget1);
         radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
 
         verticalLayout->addWidget(radioButton_4);
@@ -158,7 +158,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -168,14 +168,14 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Szyfrator", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Przesuni\304\231cie:", nullptr));
-        spinBox->setPrefix(QCoreApplication::translate("MainWindow", "+", nullptr));
+        spinBoxprzesuniecie->setPrefix(QCoreApplication::translate("MainWindow", "+", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Input:", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Wczytaj...", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Zapisz...", nullptr));
+        pushButtonwczytaj->setText(QCoreApplication::translate("MainWindow", "Wczytaj...", nullptr));
+        pushButtonzapisz->setText(QCoreApplication::translate("MainWindow", "Zapisz...", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Output:", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Wykonaj", nullptr));
-        radioButton->setText(QCoreApplication::translate("MainWindow", "Szyfruj", nullptr));
-        radioButton_2->setText(QCoreApplication::translate("MainWindow", "Deszyfruj", nullptr));
+        pushButtonwykonaj->setText(QCoreApplication::translate("MainWindow", "Wykonaj", nullptr));
+        radioButtonszyfruj->setText(QCoreApplication::translate("MainWindow", "Szyfruj", nullptr));
+        radioButtondeszyfruj->setText(QCoreApplication::translate("MainWindow", "Deszyfruj", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Szyfr Cezara", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "Wczytaj...", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Input:", nullptr));

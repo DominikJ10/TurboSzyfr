@@ -18,7 +18,7 @@
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -37,7 +37,7 @@
       <string>Przesunięcie:</string>
      </property>
     </widget>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
+    <widget class="QPlainTextEdit" name="plainTextEditinput">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -47,7 +47,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPlainTextEdit" name="plainTextEdit_2">
+    <widget class="QPlainTextEdit" name="plainTextEditoutput">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -57,7 +57,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QSpinBox" name="spinBox">
+    <widget class="QSpinBox" name="spinBoxprzesuniecie">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -86,7 +86,7 @@
       <string>Input:</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButtonwczytaj">
      <property name="geometry">
       <rect>
        <x>419</x>
@@ -99,7 +99,7 @@
       <string>Wczytaj...</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="pushButtonzapisz">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -125,7 +125,7 @@
       <string>Output:</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="pushButtonwykonaj">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -138,7 +138,7 @@
       <string>Wykonaj</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -149,14 +149,14 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QRadioButton" name="radioButtonszyfruj">
         <property name="text">
          <string>Szyfruj</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioButton_2">
+       <widget class="QRadioButton" name="radioButtondeszyfruj">
         <property name="text">
          <string>Deszyfruj</string>
         </property>
@@ -228,7 +228,7 @@
       <string>Output:</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>
