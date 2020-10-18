@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButtonwczytaj_clicked();
 
+    void on_pushButtonzapisz_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

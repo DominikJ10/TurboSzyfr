@@ -89,9 +89,9 @@
     <widget class="QPushButton" name="pushButtonwczytaj">
      <property name="geometry">
       <rect>
-       <x>419</x>
+       <x>409</x>
        <y>160</y>
-       <width>81</width>
+       <width>91</width>
        <height>21</height>
       </rect>
      </property>
@@ -102,14 +102,14 @@
     <widget class="QPushButton" name="pushButtonzapisz">
      <property name="geometry">
       <rect>
-       <x>420</x>
+       <x>409</x>
        <y>510</y>
-       <width>80</width>
+       <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>Zapisz...</string>
+      <string>Zapisz jako...</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
