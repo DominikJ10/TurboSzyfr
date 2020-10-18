@@ -1,4 +1,4 @@
-# TurboSzyfrator
+# TurboSzyfr
 
 - Szyfr Cezara
 - Szyfrowanie kluczem publicznym/prywatnym
