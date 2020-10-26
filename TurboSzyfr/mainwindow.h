@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QTabWidget>
 #include <QLabel>
+#include <string>
+#include <iostream>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +25,10 @@ private slots:
     void on_pushButtonwczytaj_clicked();
 
     void on_pushButtonzapisz_clicked();
+
+    void on_spinBoxprzesuniecie_valueChanged(int arg1);
+
+    QString cezar(QString text, int s);
 
 private:
     Ui::MainWindow *ui;

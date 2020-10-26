@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "main.cpp"
 
 #include <QApplication>
 #include <QString>
@@ -7,6 +8,7 @@
 #include <QFile>
 #include <QByteArray>
 #include <QFileDevice>
+#include <string>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,7 +21,10 @@ MainWindow::MainWindow(QWidget *parent)
 //TAB 1 - CEZAR
 
 
-QString input, output;
+QString inputfile, outputfile; //pliki i ich zawartości
+QString input, output, text; //zawartości samych pól
+int shift;
+
 
 
 
@@ -32,16 +37,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonwykonaj_clicked()
 {
+    text = ui->plainTextEditinput->toPlainText();
+
+    if (ui->radioButtonszyfr->isChecked())
+    output = cezar(text, shift);
+
+    else if (ui->radioButtondeszyfr->isChecked())
+    output = cezar(text, 26 - shift);
+
+
+    ui->plainTextEditoutput->setPlainText(output);
+
+
     //bierze zawartość pola input, przerabia i daje na pole output
-    //dopiero przycisk zapisz zapisuje (no shit)
+    //dopiero przycisk zapisz zapisuje
 }
 
 void MainWindow::on_pushButtonwczytaj_clicked()
 {
     ui->plainTextEditinput->clear();
-    input = QFileDialog::getOpenFileName(this,tr("Wczytaj..."),"/",tr("Text files (*.txt)")); //wybieranie pliku
+    inputfile = QFileDialog::getOpenFileName(this,tr("Wczytaj..."),"/",tr("Text files (*.txt)")); //wybieranie pliku
 
-    QFile file(input);
+    QFile file(inputfile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
 
@@ -53,5 +70,10 @@ void MainWindow::on_pushButtonwczytaj_clicked()
 
 void MainWindow::on_pushButtonzapisz_clicked()
 {
-    output = QFileDialog::getSaveFileName(this,tr("Zapisz jako..."),"/",tr("Text files (*.txt)"));
+    outputfile = QFileDialog::getSaveFileName(this,tr("Zapisz jako..."),"/",tr("Text files (*.txt)"));
+}
+
+void MainWindow::on_spinBoxprzesuniecie_valueChanged(int arg1)
+{
+    shift = ui->spinBoxprzesuniecie->value();
 }
