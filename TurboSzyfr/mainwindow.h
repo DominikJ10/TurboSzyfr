@@ -28,7 +28,15 @@ private slots:
 
     void on_spinBoxprzesuniecie_valueChanged(int arg1);
 
-    QString cezar(QString text, int s);
+    void on_pushButtonsha512_clicked();
+
+    void on_pushButtonsha256_clicked();
+
+    void on_pushButtonwhirlpool_clicked();
+
+    void on_pushButtonmd5_clicked();
+
+    void on_pushButtonhashwczytaj_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "main.cpp"
+#include "cezar.h"
 
 #include <QApplication>
 #include <QString>
@@ -9,6 +9,10 @@
 #include <QByteArray>
 #include <QFileDevice>
 #include <string>
+#include <QDataStream>
+#include <QTextStream>
+
+#include "sha.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -37,6 +41,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonwykonaj_clicked()
 {
+
     text = ui->plainTextEditinput->toPlainText();
 
     if (ui->radioButtonszyfr->isChecked())
@@ -47,10 +52,6 @@ void MainWindow::on_pushButtonwykonaj_clicked()
 
 
     ui->plainTextEditoutput->setPlainText(output);
-
-
-    //bierze zawartość pola input, przerabia i daje na pole output
-    //dopiero przycisk zapisz zapisuje
 }
 
 void MainWindow::on_pushButtonwczytaj_clicked()
@@ -71,9 +72,66 @@ void MainWindow::on_pushButtonwczytaj_clicked()
 void MainWindow::on_pushButtonzapisz_clicked()
 {
     outputfile = QFileDialog::getSaveFileName(this,tr("Zapisz jako..."),"/",tr("Text files (*.txt)"));
+
+    QFile file(outputfile);
+    if(!file.open(QIODevice::WriteOnly)){
+            file.close();
+        }
+    else {
+            QTextStream out(&file); out << output;
+            file.close();
+        }
+
 }
 
 void MainWindow::on_spinBoxprzesuniecie_valueChanged(int arg1)
 {
     shift = ui->spinBoxprzesuniecie->value();
 }
+
+
+//TAB 2 - HASHE
+
+
+void MainWindow::on_pushButtonhashwczytaj_clicked()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void MainWindow::on_pushButtonsha512_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonsha256_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonwhirlpool_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonmd5_clicked()
+{
+
+}
+
+
