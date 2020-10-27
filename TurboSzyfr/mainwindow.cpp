@@ -12,7 +12,6 @@
 #include <QDataStream>
 #include <QTextStream>
 
-#include "sha.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -91,13 +90,6 @@ void MainWindow::on_spinBoxprzesuniecie_valueChanged(int arg1)
 
 
 //TAB 2 - HASHE
-
-
-void MainWindow::on_pushButtonhashwczytaj_clicked()
-{
-
-}
-
 
 
 

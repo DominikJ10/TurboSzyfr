@@ -36,8 +36,6 @@ private slots:
 
     void on_pushButtonmd5_clicked();
 
-    void on_pushButtonhashwczytaj_clicked();
-
 private:
     Ui::MainWindow *ui;
 };

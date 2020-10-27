@@ -577,18 +577,7 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		D:/Qt/5.15.1/mingw81_64/include/QtCore/QByteArray \
 		D:/Qt/5.15.1/mingw81_64/include/QtCore/QFileDevice \
 		D:/Qt/5.15.1/mingw81_64/include/QtCore/QDataStream \
-		D:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
-		sha.h \
-		config.h \
-		iterhash.h \
-		cryptlib.h \
-		stdcpp.h \
-		trap.h \
-		ossig.h \
-		secblock.h \
-		misc.h \
-		smartptr.h \
-		simple.h
+		D:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o mainwindow.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 
