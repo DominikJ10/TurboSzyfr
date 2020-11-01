@@ -1,0 +1,2 @@
+C:\Users\Dominik\Documents\GitHub\TurboSzyfr\cryptopp820\Win32\Output\Debug\cryptlib.pdb
+C:\Users\Dominik\Documents\GitHub\TurboSzyfr\cryptopp820\Win32\cryptlib\Debug\cryptlib.pdb

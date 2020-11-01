@@ -1,0 +1,5 @@
+^C:\USERS\DOMINIK\DOCUMENTS\GITHUB\TURBOSZYFR\CRYPTOPP820\ADHOC.CPP.PROTO
+if not exist adhoc.cpp copy "C:\Users\Dominik\Documents\GitHub\TurboSzyfr\cryptopp820\adhoc.cpp.proto" adhoc.cpp
+        echo: >> adhoc.cpp.copied
+^C:\USERS\DOMINIK\DOCUMENTS\GITHUB\TURBOSZYFR\CRYPTOPP820\RDRAND.ASM
+ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo"Win32\cryptlib\Debug\rdrand-x86.obj" "C:\Users\Dominik\Documents\GitHub\TurboSzyfr\cryptopp820\rdrand.asm"

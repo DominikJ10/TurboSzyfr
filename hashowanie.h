@@ -3,16 +3,16 @@
 
 #include <QString>
 
-QString hashowanieSHA512(QString input);
+QString hashowanieSHA512(QByteArray input);
 
 
-QString hashowanieSHA256(QString input);
+QString hashowanieSHA256(QByteArray input);
 
 
-QString hashowanieMD5(QString input);
+QString hashowanieMD5(QByteArray input);
 
 
-//QString hashowaniewhirlpool(QString input);
+QString hashowanieSHA1(QByteArray input);
 
 
 

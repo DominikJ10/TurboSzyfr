@@ -12,7 +12,8 @@
 #include <QDataStream>
 #include <QTextStream>
 
-#include "hashowanie.h"
+#include <hashowanie.h>
+#include <klucze.h>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -29,9 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
 QString inputfile, outputfile; //pliki i ich zawartości
 QString input, output, text; //zawartości samych pól
 int shift, length;
-
-
-
+QByteArray inputarray;
 
 
 MainWindow::~MainWindow()
@@ -97,28 +96,80 @@ void MainWindow::on_spinBoxprzesuniecie_valueChanged(int arg1)
 
 void MainWindow::on_pushButtonsha512_clicked()
 {
-    input = ui->plainTextEditinput2->toPlainText();
-    output = hashowanieSHA512(input);
+    if (ui->radioButtontekst2->isChecked()){
+    input = ui->plainTextEditinput2->toPlainText();}
+
+    inputarray = input.toUtf8();
+    output = hashowanieSHA512(inputarray);
     ui->plainTextEditoutput2->setPlainText(output);
 }
 
 void MainWindow::on_pushButtonsha256_clicked()
 {
-    input = ui->plainTextEditinput2->toPlainText();
-    output = hashowanieSHA256(input);
+    if (ui->radioButtontekst2->isChecked()){
+    input = ui->plainTextEditinput2->toPlainText();}
+
+    inputarray = input.toUtf8();
+    output = hashowanieSHA256(inputarray);
     ui->plainTextEditoutput2->setPlainText(output);
 }
 
-void MainWindow::on_pushButtonwhirlpool_clicked()
+void MainWindow::on_pushButtonsha1_clicked()
 {
-    input = ui->plainTextEditinput2->toPlainText();
-    //output = hashowaniewhirlpool(input);
+    if (ui->radioButtontekst2->isChecked()){
+    input = ui->plainTextEditinput2->toPlainText();}
+
+    inputarray = input.toUtf8();
+    output = hashowanieSHA1(inputarray);
     ui->plainTextEditoutput2->setPlainText(output);
 }
 
 void MainWindow::on_pushButtonmd5_clicked()
 {
-    input = ui->plainTextEditinput2->toPlainText();
-    output = hashowanieMD5(input);
+    if (ui->radioButtontekst2->isChecked()){
+    input = ui->plainTextEditinput2->toPlainText();}
+
+    inputarray = input.toUtf8();
+    output = hashowanieMD5(inputarray);
     ui->plainTextEditoutput2->setPlainText(output);
+}
+
+void MainWindow::on_pushButtonwczytaj2_clicked()
+{
+    if(ui->radioButtontekst2->isChecked())
+    {
+        ui->plainTextEditinput2->clear();
+        inputfile = QFileDialog::getOpenFileName(this,tr("Wczytaj..."),"/",tr("Text files (*.txt)"));
+
+        QFile file(inputfile);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return;
+
+        while (!file.atEnd()) {
+            QByteArray line = file.readLine();
+            ui->plainTextEditinput2->insertPlainText(line);
+            }
+    }
+    else
+    {
+        ui->plainTextEditinput2->clear();
+        inputfile = QFileDialog::getOpenFileName(this);
+        ui->plainTextEditinput2->setPlainText(inputfile);
+
+        QFile file(inputfile);
+        if (!file.open(QIODevice::ReadOnly))
+            return;
+
+        input = file.readAll();
+    }
+}
+
+void MainWindow::on_pushButtongeneruj3_clicked()
+{
+    GenerateKeys();
+}
+
+void MainWindow::on_pushButtongeneruj4_clicked()
+{
+    GenerateKeys();
 }

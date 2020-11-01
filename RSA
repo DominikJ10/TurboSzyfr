@@ -1,0 +1,5 @@
+możemy generować klucze publiczne na podstawie prywatnych
+RSA::PublicKey rsaPublic(rsaPrivate);
+
+DSA::PublicKey dsaPublic;
+dsaPrivate.MakePublicKey(dsaPublic);

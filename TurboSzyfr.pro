@@ -11,12 +11,14 @@ CONFIG += c++11
 SOURCES += \
     cezar.cpp \
     hashowanie.cpp \
+    klucze.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     cezar.h \
     hashowanie.h \
+    klucze.h \
     mainwindow.h
 
 FORMS += \
@@ -31,3 +33,6 @@ unix|win32: LIBS += -L$$PWD/./ -lcryptlib
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
+
+DISTFILES += \
+    RSA

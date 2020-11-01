@@ -32,9 +32,15 @@ private slots:
 
     void on_pushButtonsha256_clicked();
 
-    void on_pushButtonwhirlpool_clicked();
+    void on_pushButtonsha1_clicked();
 
     void on_pushButtonmd5_clicked();
+
+    void on_pushButtonwczytaj2_clicked();
+
+    void on_pushButtongeneruj3_clicked();
+
+    void on_pushButtongeneruj4_clicked();
 
 private:
     Ui::MainWindow *ui;
