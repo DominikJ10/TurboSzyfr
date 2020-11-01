@@ -2,5 +2,5 @@
 
 - Szyfr Cezara
 - Szyfrowanie kluczem publicznym/prywatnym
-- Obliczanie SHA-256 oraz MD5 tekstu lub całych plików
+- Obliczanie SHA-1, SHA-256, SHA-512, MD5
 - Odczyt/zapis plików .txt
