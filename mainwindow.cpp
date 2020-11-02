@@ -32,7 +32,6 @@ QString input, output, text; //zawartości samych pól
 int shift, length;
 QByteArray inputarray;
 
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -48,8 +47,7 @@ void MainWindow::on_pushButtonwykonaj_clicked()
     output = cezar(text, shift);
 
     else if (ui->radioButtondeszyfr->isChecked())
-    output = cezar(text, 26 - shift);
-
+    output = cezar(text, 35 - shift);
 
     ui->plainTextEditoutput->setPlainText(output);
 }

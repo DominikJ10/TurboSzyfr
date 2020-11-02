@@ -1,8 +1,4 @@
-﻿  Performing Custom Build Tools
-          1 file(s) copied.
-  Building and assembling rdrand.asm
-   Assembling: C:\Users\Dominik\Documents\GitHub\TurboSzyfr\cryptopp820\rdrand.asm
-  pch.cpp
+﻿  pch.cpp
   cryptlib.cpp
   cpu.cpp
   integer.cpp

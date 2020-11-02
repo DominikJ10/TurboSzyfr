@@ -19,7 +19,7 @@ QString hashowanieSHA512(QByteArray input)
     CryptoPP::SHA512 hash;
     CryptoPP::SHA512().CalculateDigest(digest, (CryptoPP::byte*) input.constData(), length);
 
-    CryptoPP::HexEncoder encoder; //enkoder hash -> hex
+    CryptoPP::HexEncoder encoder; //hash -> hex
     encoder.Attach( new CryptoPP::StringSink( output ) );
     encoder.Put( digest, sizeof(digest) );
     encoder.MessageEnd();
