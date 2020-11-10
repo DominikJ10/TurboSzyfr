@@ -100,7 +100,7 @@ public:
         spinBoxprzesuniecie = new QSpinBox(tab);
         spinBoxprzesuniecie->setObjectName(QString::fromUtf8("spinBoxprzesuniecie"));
         spinBoxprzesuniecie->setGeometry(QRect(271, 190, 51, 22));
-        spinBoxprzesuniecie->setValue(1);
+        spinBoxprzesuniecie->setValue(0);
         label_2 = new QLabel(tab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(21, 50, 47, 13));
@@ -268,7 +268,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

@@ -24,9 +24,7 @@ QString hashowanieSHA512(QByteArray input)
     encoder.Put( digest, sizeof(digest) );
     encoder.MessageEnd();
 
-    return QString::fromStdString(output); //string na QString
-
-
+    return QString::fromStdString(output);
 }
 
 QString hashowanieSHA256(QByteArray input)

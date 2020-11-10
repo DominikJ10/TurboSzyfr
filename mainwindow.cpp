@@ -69,6 +69,7 @@ void MainWindow::on_pushButtonwczytaj_clicked()
 
 void MainWindow::on_pushButtonzapisz_clicked()
 {
+    output = ui->plainTextEditoutput->toPlainText();
     outputfile = QFileDialog::getSaveFileName(this,tr("Zapisz jako..."),"/",tr("Text files (*.txt)"));
 
     QFile file(outputfile);

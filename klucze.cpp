@@ -17,7 +17,8 @@ void GenerateKeys()
 
     CryptoPP::RSA::PublicKey rsaPublic(rsaPrivate);
 
-    EncodePrivateKey("rsa-private.key", rsaPrivate);
+    //EncodePrivateKey("rsa-private.key", rsaPrivate);
+    SaveHexPrivateKey("rsa-private.key", rsaPrivate);
     EncodePublicKey("rsa-public.key", rsaPublic);
 
 }
